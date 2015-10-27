@@ -1,11 +1,15 @@
 package br.com.preventsenior.sparkcdi;
 
-import static spark.Spark.*;
+import static spark.Spark.after;
+import static spark.Spark.delete;
+import static spark.Spark.exception;
+import static spark.Spark.get;
+import static spark.Spark.port;
+import static spark.Spark.post;
 
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 
-import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.events.ContainerInitialized;
 
 import com.google.gson.Gson;
@@ -26,10 +30,6 @@ public class LivrosAPISpark {
 	@Inject
 	private Gson gson;
 
-	public static void main(String[] args) {
-		new Weld().initialize();
-	}
-	
 	public void createAPI(@Observes ContainerInitialized event) {
 		port(8080);
 		get("/api/livros", (request, response) -> {

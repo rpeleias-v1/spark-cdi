@@ -20,6 +20,7 @@
 			<groupId>org.jboss.weld.se</groupId>
 			<artifactId>weld-se</artifactId>
 			<version>${weld.version}</version>
+			<type>jar</type>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -66,7 +67,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>java org.jboss.weld.environment.se.StartMain</mainClass>
+							<mainClass>org.jboss.weld.environment.se.StartMain</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

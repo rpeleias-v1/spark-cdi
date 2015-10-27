@@ -4,6 +4,13 @@
 	bean-discovery-mode="all">
 
 	<scan>
-        <exclude name="org.jboss.weld.**" />
-    </scan>
+		<exclude name="org.**" />
+		<exclude name="groovy.**" />
+		<exclude name="groovyjarjarasm.**" />
+		<exclude name="javax.xml.**" />
+		<exclude name="javassist.**" />
+		<exclude name="net.**" />
+		<exclude name="com.**" />
+		<exclude name="javax.**" />
+	</scan>
 </beans>  
